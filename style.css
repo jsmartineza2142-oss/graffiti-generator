@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'DonGraffiti';
-  src: url('fonts/DonGraffiti.otf') format('truetype');
+  src: url('fonts/DonGraffiti.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'GrafittiNewYear';
-  src: url('fonts/GrafittiNewYear.otf') format('truetype');
+  src: url('fonts/GrafittiNewYear.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'Street Wars Demo';
-  src: url('fonts/Street Wars Demo.otf') format('truetype');
+  src: url('fonts/Street Wars Demo.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'Street Wars Demo';
-  src: url('fonts/Street Wars Demo.otf') format('truetype');
+  src: url('fonts/Street Wars Demo.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: 'Decipher_PERSONAL_USE_ONLY';
-  src: url('fonts/Decipher_PERSONAL_USE_ONLY.otf') format('truetype');
+  src: url('fonts/Decipher_PERSONAL_USE_ONLY.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
