@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Vabioxe Graffiti';
-  src: url('fonts/Vabioxe Graffiti.ttf') format('truetype');
+  font-family: 'VabioxeGraffiti';
+  src: url('fonts/VabioxeGraffiti.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -15,8 +15,8 @@
 }
 
 @font-face {
-  font-family: 'Urban Heroes';
-  src: url('fonts/Urban Heroes.ttf') format('truetype');
+  font-family: 'UrbanHeroes';
+  src: url('fonts/UrbanHeroes.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -31,24 +31,16 @@
 }
 
 @font-face {
-  font-family: 'Street Wars Demo';
-  src: url('fonts/Street Wars Demo.otf') format('opentype');
+  font-family: 'StreetWarsDemo';
+  src: url('fonts/StreetWarsDemo.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Street Wars Demo';
-  src: url('fonts/Street Wars Demo.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Decipher_PERSONAL_USE_ONLY';
-  src: url('fonts/Decipher_PERSONAL_USE_ONLY.otf') format('opentype');
+  font-family: 'Decipher';
+  src: url('fonts/Decipher.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -63,8 +55,8 @@
 }
 
 @font-face {
-  font-family: 'Urban Calligraphy';
-  src: url('fonts/Urban Calligraphy.ttf') format('truetype');
+  font-family: 'UrbanCalligraphy';
+  src: url('fonts/UrbanCalligraphy.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
