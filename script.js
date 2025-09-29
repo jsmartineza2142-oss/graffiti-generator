@@ -1,19 +1,35 @@
 function drawText() {
   const canvas = document.getElementById("graffitiCanvas");
   const ctx = canvas.getContext("2d");
-  const name = document.getElementById("nameInput").value || "Grafiti";
+  const name = document.getElementById("nameInput").value.trim() || "Grafiti";
 
   // limpiar canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // lista de fuentes disponibles (deben estar declaradas en style.css)
-  const fuentes = ["VabioxeGraffiti", "DonGraffiti", "UrbanHeroes", "GrafittiNewYear", "aAnotherTag", "StreetWarsDemo", "Decipher", "Hesorder", "UrbanCalligraphy"];
+  const fuentes = [
+    "VabioxeGraffiti",
+    "DonGraffiti",
+    "aAnotherTag",
+    "UrbanHeroes",
+    "GrafittiNewYear",
+    "StreetWarsDemo",
+    "Decipher",
+    "Hesorder",
+    "UrbanCalligraphy"
+  ];
 
   // escoger una fuente al azar
   const fuenteAleatoria = fuentes[Math.floor(Math.random() * fuentes.length)];
 
-  // aplicar fuente
-  ctx.font = "120px " + fuenteAleatoria;
+  // tamaño dinámico del texto
+  let fontSize = 120;
+  ctx.font = `${fontSize}px ${fuenteAleatoria}`;
+  while (ctx.measureText(name).width > canvas.width - 40 && fontSize > 20) {
+    fontSize -= 5;
+    ctx.font = `${fontSize}px ${fuenteAleatoria}`;
+  }
+
   ctx.textBaseline = "middle";
   ctx.textAlign = "center";
 
@@ -53,4 +69,8 @@ window.onload = function () {
     width: 200,
     height: 200,
   });
+
+  // evento botones
+  document.getElementById("generateBtn").addEventListener("click", drawText);
+  document.getElementById("downloadBtn").addEventListener("click", downloadImage);
 };
