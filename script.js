@@ -7,7 +7,7 @@ function drawText() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // lista de fuentes disponibles (deben estar declaradas en style.css)
-  const fuentes = ["Vabioxe Graffiti", "DonGraffiti", "Urban Heroes", "GrafittiNewYear", "aAnotherTag", "Street Wars Demo", "Decipher_PERSONAL_USE_ONLY", "Hesorder", "Urban Calligraphy"];
+  const fuentes = ["VabioxeGraffiti", "DonGraffiti", "UrbanHeroes", "GrafittiNewYear", "aAnotherTag", "StreetWarsDemo", "Decipher", "Hesorder", "UrbanCalligraphy"];
 
   // escoger una fuente al azar
   const fuenteAleatoria = fuentes[Math.floor(Math.random() * fuentes.length)];
