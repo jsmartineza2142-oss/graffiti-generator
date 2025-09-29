@@ -12,12 +12,12 @@
 
     <div class="controls">
       <input id="nameInput" type="text" placeholder="Escribe tu nombre..." />
-      <button id="generateBtn">Generar</button>
       <button id="downloadBtn">Descargar PNG</button>
     </div>
 
     <div class="canvas-wrap">
-      <canvas id="graffitiCanvas"></canvas>
+      <!-- aquí definimos tamaño real del canvas -->
+      <canvas id="graffitiCanvas" width="1000" height="400"></canvas>
     </div>
 
     <h2>Escanea este QR para abrir la página:</h2>
@@ -25,7 +25,7 @@
     <p class="note">Puedes enviar el enlace o imprimir este QR.</p>
   </main>
 
-  <!-- librería QR simple -->
+  <!-- librería QR -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
