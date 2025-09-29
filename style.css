@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: 'aAnotherTag';
+  src: url('fonts/aAnotherTag.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'DonGraffiti';
   src: url('fonts/DonGraffiti.otf') format('opentype');
   font-weight: normal;
