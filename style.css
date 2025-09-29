@@ -1,75 +1,37 @@
 @font-face {
   font-family: 'VabioxeGraffiti';
   src: url('fonts/VabioxeGraffiti.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
-@font-face {
-  font-family: 'aAnotherTag';
-  src: url('fonts/aAnotherTag.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @font-face {
   font-family: 'DonGraffiti';
   src: url('fonts/DonGraffiti.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
 @font-face {
   font-family: 'UrbanHeroes';
   src: url('fonts/UrbanHeroes.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
 @font-face {
   font-family: 'GrafittiNewYear';
   src: url('fonts/GrafittiNewYear.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
 @font-face {
   font-family: 'StreetWarsDemo';
   src: url('fonts/StreetWarsDemo.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
 @font-face {
   font-family: 'Decipher';
   src: url('fonts/Decipher.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
 @font-face {
   font-family: 'Hesorder';
   src: url('fonts/Hesorder.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
-
 @font-face {
   font-family: 'UrbanCalligraphy';
   src: url('fonts/UrbanCalligraphy.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
+/* estilo general */
 :root {
   --bg: #111;
   --panel: #222;
@@ -82,8 +44,6 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
 }
 
 .wrap {
