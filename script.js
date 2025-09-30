@@ -5,7 +5,7 @@ function drawText() {
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // solo 2 fuentes para probar
+  // fuentes disponibles
   const fuentes = ["VabioxeGraffiti", "DonGraffiti"];
   const fuenteAleatoria = fuentes[Math.floor(Math.random() * fuentes.length)];
 
@@ -13,17 +13,20 @@ function drawText() {
   ctx.textBaseline = "middle";
   ctx.textAlign = "center";
 
+  // sombra
   ctx.shadowColor = "rgba(0,0,0,0.7)";
-  ctx.shadowBlur = 15;
+  ctx.shadowBlur = 12;
 
-  const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  gradient.addColorStop("0", "#ff0055");
-  gradient.addColorStop("1", "#00eaff");
-  ctx.fillStyle = gradient;
+  // 🎨 color sólido más legible
+  const colores = ["#ff0055", "#00eaff", "#39ff14", "#ffcc00", "#ff6f00"];
+  const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+  ctx.fillStyle = colorAleatorio;
 
+  // texto principal
   ctx.fillText(name, canvas.width / 2, canvas.height / 2);
 
-  ctx.lineWidth = 8;
+  // borde blanco para contraste
+  ctx.lineWidth = 6;
   ctx.strokeStyle = "#fff";
   ctx.strokeText(name, canvas.width / 2, canvas.height / 2);
 }
@@ -44,7 +47,8 @@ window.onload = function () {
     height: 200,
   });
 
-  document.getElementById("nameInput").addEventListener("input", drawText);
+  // botón generar
+  document.getElementById("generateBtn").addEventListener("click", drawText);
   document.getElementById("downloadBtn").addEventListener("click", downloadImage);
 
   drawText();
