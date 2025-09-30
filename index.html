@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Generador Grafiti</title>
-<link rel="stylesheet" href="style.css" />
-</head> 
-<body> 
- <main class="wrap">
-  <h1>Generador de Nombres en Grafiti 🎨</h1>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Generador Grafiti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Generador de Nombres en Grafiti 🎨</h1>
 
- <div class="controls">
- <input id="nameInput" type="text" placeholder="Escribe tu nombre..." />
-  <button id="downloadBtn">Descargar PNG</button> </div>
-   <div class="canvas-wrap"> 
-     <!-- aquí definimos tamaño real del canvas --> 
-     <canvas id="graffitiCanvas" width="1000" height="400">
-       
-     </canvas> 
-   </div> 
-   <h2>Escanea este QR para abrir la página:</h2> 
-   <div id="qrcode" class="qr"></div> 
-   <p class="note">Puedes enviar el enlace o imprimir este QR.</p>
- </main>
+    <div class="controls">
+      <input id="nameInput" type="text" placeholder="Escribe tu nombre..." />
+      <button id="downloadBtn">Descargar PNG</button>
+    </div>
+
+    <div class="canvas-wrap">
+      <!-- tamaño real del canvas -->
+      <canvas id="graffitiCanvas" width="1000" height="400"></canvas>
+    </div>
+
+    <h2>Escanea este QR para abrir la página:</h2>
+    <div id="qrcode" class="qr"></div>
+    <p class="note">Puedes enviar el enlace o imprimir este QR.</p>
+  </main>
+
   <!-- librería QR -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="script.js"></script>
-</body> 
+</body>
 </html>
