@@ -1,12 +1,12 @@
 function drawText() {
   const canvas = document.getElementById("graffitiCanvas");
   const ctx = canvas.getContext("2d");
-  const name = document.getElementById("nameInput").value.trim() || "Grafiti";
+  const name = document.getElementById("nameInput").value || "Grafiti";
 
   // limpiar canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // lista de fuentes disponibles (deben estar declaradas en style.css)
+  // lista de fuentes (deben coincidir con style.css)
   const fuentes = [
     "VabioxeGraffiti",
     "DonGraffiti",
@@ -21,14 +21,8 @@ function drawText() {
   // escoger una fuente al azar
   const fuenteAleatoria = fuentes[Math.floor(Math.random() * fuentes.length)];
 
-  // tamaño dinámico del texto
-  let fontSize = 120;
-  ctx.font = `${fontSize}px ${fuenteAleatoria}`;
-  while (ctx.measureText(name).width > canvas.width - 40 && fontSize > 20) {
-    fontSize -= 5;
-    ctx.font = `${fontSize}px ${fuenteAleatoria}`;
-  }
-
+  // aplicar fuente
+  ctx.font = "120px " + fuenteAleatoria;
   ctx.textBaseline = "middle";
   ctx.textAlign = "center";
 
@@ -60,8 +54,9 @@ function downloadImage() {
   link.click();
 }
 
-// generar QR con la URL de la página
+// inicializar eventos
 window.onload = function () {
+  // generar QR
   const url = window.location.href;
   new QRCode(document.getElementById("qrcode"), {
     text: url,
@@ -69,7 +64,12 @@ window.onload = function () {
     height: 200,
   });
 
-  // evento botones
-  document.getElementById("generateBtn").addEventListener("click", drawText);
+  // dibujar cuando se escribe
+  document.getElementById("nameInput").addEventListener("input", drawText);
+
+  // botón de descarga
   document.getElementById("downloadBtn").addEventListener("click", downloadImage);
+
+  // primer dibujo por defecto
+  drawText();
 };
