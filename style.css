@@ -6,30 +6,7 @@
   font-family: 'DonGraffiti';
   src: url('fonts/DonGraffiti.otf') format('opentype');
 }
-@font-face {
-  font-family: 'UrbanHeroes';
-  src: url('fonts/UrbanHeroes.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'GrafittiNewYear';
-  src: url('fonts/GrafittiNewYear.otf') format('opentype');
-}
-@font-face {
-  font-family: 'StreetWarsDemo';
-  src: url('fonts/StreetWarsDemo.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Decipher';
-  src: url('fonts/Decipher.otf') format('opentype');
-}
-@font-face {
-  font-family: 'Hesorder';
-  src: url('fonts/Hesorder.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'UrbanCalligraphy';
-  src: url('fonts/UrbanCalligraphy.ttf') format('truetype');
-}
+
 
 /* estilo general */
 :root {
