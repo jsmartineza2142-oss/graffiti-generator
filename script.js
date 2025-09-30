@@ -3,10 +3,8 @@ function drawText() {
   const ctx = canvas.getContext("2d");
   const name = document.getElementById("nameInput").value || "Grafiti";
 
-  // limpiar
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // lista de fuentes(declaradas en style.css con @font-face)
   const fuentes = [
     "VabioxeGraffiti", 
     "DonGraffiti",
@@ -16,31 +14,46 @@ function drawText() {
     "Decipher",
     "Hesorder",
     "UrbanCalligraphy",
-    ];
+  ];
 
-  // escoger una al azar
   const fuenteAleatoria = fuentes[Math.floor(Math.random() * fuentes.length)];
 
-  // aplicar la fuente
   ctx.font = "120px " + fuenteAleatoria;
   ctx.textBaseline = "middle";
   ctx.textAlign = "center";
 
-  // sombra
-  ctx.shadowColor = "rgba(0,0,0,0.7)";
-  ctx.shadowBlur = 15;
+  // sombra simple
+  ctx.shadowColor = "rgba(0,0,0,0.8)";
+  ctx.shadowBlur = 8;
 
-  // relleno con gradiente
-  const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  gradient.addColorStop("0", "#ff0055");
-  gradient.addColorStop("1", "#00eaff");
-  ctx.fillStyle = gradient;
-
-  // texto principal
+  // color sólido (puedes cambiarlo si quieres)
+  ctx.fillStyle = "#ff4d4d"; // rojo vivo
   ctx.fillText(name, canvas.width / 2, canvas.height / 2);
 
-  // contorno
-  ctx.lineWidth = 8;
-  ctx.strokeStyle = "#fff";
+  // contorno negro
+  ctx.lineWidth = 6;
+  ctx.strokeStyle = "#000";
   ctx.strokeText(name, canvas.width / 2, canvas.height / 2);
+}
+
+// conectar el botón
+window.onload = function () {
+  document.getElementById("generateBtn").addEventListener("click", drawText);
+
+  // generar QR de la página
+  const url = window.location.href;
+  new QRCode(document.getElementById("qrcode"), {
+    text: url,
+    width: 200,
+    height: 200,
+  });
+};
+
+// descargar imagen
+function downloadImage() {
+  const canvas = document.getElementById("graffitiCanvas");
+  const link = document.createElement("a");
+  link.download = "graffiti.png";
+  link.href = canvas.toDataURL("image/png");
+  link.click();
 }
